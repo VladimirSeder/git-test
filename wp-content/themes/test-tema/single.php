@@ -12,7 +12,10 @@ if (have_posts()) {
         echo('<br />');
         }?>
         <span>Postavio: </span><?php the_author_posts_link(); ?>       
-        <?php        
+        <?php   
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;     
 	} 
 }
 get_footer();

@@ -1,5 +1,5 @@
 <?php
-function custom_post_types() {
+/*function custom_post_types() {
   register_post_type('event', array(
     'supports' => array('title', 'editor', 'excerpt'),
     'rewrite' => array('slug' => 'events'),
@@ -16,7 +16,8 @@ function custom_post_types() {
   ));
 }
 
-add_action('init', 'custom_post_types');
+add_action('init', 'custom_post_types');*/
+include get_template_directory() . '/inc/cpt.php';
 
 function add_files() {
     wp_enqueue_style('add_main_styles', get_stylesheet_uri(), microtime());
